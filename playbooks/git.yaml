@@ -1,0 +1,15 @@
+---
+- name: Docker install
+  hosts: gitserver
+  become: true
+  remote_user: root
+
+  tasks:
+    - name: Install requirements
+      import_tasks: tasks/requisitos.yml
+
+    - name: Add repo gpgp
+      import_tasks: tasks/repo.yml
+
+    - name: Install docker
+      import_tasks: tasks/install.yml

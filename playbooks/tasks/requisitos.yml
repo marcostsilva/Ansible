@@ -1,0 +1,11 @@
+---
+- name: Instalando pacote de pre requisitos
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - software-properties-common
+    update_cache: yes
+    state: present
