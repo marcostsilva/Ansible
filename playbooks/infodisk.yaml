@@ -1,0 +1,22 @@
+---
+- name: LVM setup
+  hosts: gits
+  become: true
+  become_user: root
+  remote_user: root
+  gather_facts: true
+
+  tasks:
+    - name: Collect status for hardware
+      setup:
+        gather_subset:
+          - hardware
+
+    - name: Print the stat  output  for devices
+      debug:
+        var: hostvars[inventory_hostname].ansible_devices
+
+    - name: Print the disk size only for sd disks
+      debug:
+        msg: "{{ ansible_devices[item].size }}"
+      loop: "{{ ansible_devices.keys() | map('regex_search', 'vd.*') | select('string') | list }}"

@@ -1,0 +1,52 @@
+---
+- name: playbook for simple 1 GB partition
+  hosts: gits
+  remote_user: root
+  gather_facts: False
+
+  tasks:
+    - name: create partition
+      parted:
+        device: /dev/vdb
+        number: 1
+        flags: [ lvm ]
+        state: present
+        part_end: 2GB
+
+    - name: Install lvm2 dependency
+      package:
+        name: 
+          - lvm2
+          - parted
+        state: present
+
+    - name: task for creating volume group
+      lvg:
+          vg: vg_data
+          pvs: /dev/vdb1
+          pesize: 16
+
+    - name: task for creating logical volume
+      lvol:
+          vg: vg_data
+          lv:  lv_data
+          size: 1g
+          force: yes
+
+    - name: Create directory data1 if does not exist
+      file:
+        path: /opt/teste
+        state: directory
+        mode: '0755'
+
+    - name: format the ext4 filesystem
+      filesystem:
+        fstype: ext4
+        dev: /dev/vg_data/lv_data
+
+    - name: mount the lv on /data1
+      mount:
+        path: /opt/teste
+        src: /dev/vg_data/lv_data
+        fstype: ext4
+        state: mounted
