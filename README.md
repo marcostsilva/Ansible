@@ -1,27 +1,22 @@
 # Project Name
 
-A brief description of the project.
+Learning Ansible
 
 ## Table of Contents
 
-- [Install docker](#project-description)
-- [list disk info](#features)
-- [Create a lvm partition](#installation)
+- [Install docker](#docker)
+- [list disk info](#List info of disks)
+- [Create a lvm partition](#Create a PV / VG / LV on disk of VM)
 
 ## Project Description
 
-Provide a more detailed overview of the project. Explain its purpose, features, and any relevant background information.
+Ansible Playbooks and tasks to many functions
 
-## Features
-
-- List the key features or functionalities of the project.
-- Describe what makes it unique or useful.
-
-## Installation
+## Content
 
 Provide instructions on how to install or set up the project. Include any dependencies or system requirements.
 
-## Usage
+#Playbook to install docker on vm
 
 Provide examples or instructions on how to use the project. Include code snippets or screenshots if applicable.
 
