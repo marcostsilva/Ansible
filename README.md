@@ -1,11 +1,9 @@
-# Project Name
+# Aprendendo Ansible
 
-Learning Ansible
+## Playbook Executadas
 
-## Table of Contents
-
-- [Install docker](#docker)
-- [list disk info](#List info of disks)
+- [docker.yaml](playbooks/docker.yaml)
+- [infodisk.yaml](playbooks/infodisk.yaml)
 - [Create a lvm partition](#Create a PV / VG / LV on disk of VM)
 
 ## Project Description
@@ -28,7 +26,7 @@ Explain how others can contribute to the project. Include guidelines for submitt
 
 Specify the project's license and provide a link to the full license text if needed.
 
-You can see [docker.yaml](playbooks/docker.yaml) playbook to install docker.
+You can see  playbook to install docker.
 
 You can also write [links](/docs/otherFolder/doc4.mdx) relative to the site directory, but it's not recommended.
 
