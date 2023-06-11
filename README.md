@@ -28,7 +28,7 @@ Explain how others can contribute to the project. Include guidelines for submitt
 
 Specify the project's license and provide a link to the full license text if needed.
 
-You can see [docker](playbooks/docker.yaml) playbook to install docker.
+You can see [docker.yaml](playbooks/docker.yaml) playbook to install docker.
 
 You can also write [links](/docs/otherFolder/doc4.mdx) relative to the site directory, but it's not recommended.
 
