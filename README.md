@@ -4,7 +4,7 @@
 
 - [docker.yaml](playbooks/docker.yaml) - Instalação do docker em VM
 - [infodisk.yaml](playbooks/infodisk.yaml) - Mostrar informações dos discos de VM
-- [lvm.yaml](playbooks/lmv.yaml) - Cria partição LVM
+- [lvm.yaml](playbooks/lvm.yaml) - Cria partição LVM
 
 ## Project Description
 
