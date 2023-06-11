@@ -2,9 +2,9 @@
 
 ## Playbook Executadas
 
-- [docker.yaml](playbooks/docker.yaml)
-- [infodisk.yaml](playbooks/infodisk.yaml)
-- [Create a lvm partition](#Create a PV / VG / LV on disk of VM)
+- [docker.yaml](playbooks/docker.yaml) - Instalação do docker em VM
+- [infodisk.yaml](playbooks/infodisk.yaml) - Mostrar informações dos discos de VM
+- [lvm.yaml](playbooks/lmv.yaml) - Cria partição LVM
 
 ## Project Description
 
